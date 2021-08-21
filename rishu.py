@@ -271,7 +271,7 @@ def publik():
 			id.append(a['id']+"<=>\033[0;90m"+a['name'])
 			ys.write(a['id']+"<=>\033[0;90m"+a['name']+'\n')
 			print("\r  %s "%(str(len(id)))),;sys.stdout.flush();time.sleep(0.007)
-			print (  \033[0;90ma["name"])
+			print (  a["name"])
 		ys.close()
 		print ("\033[0;91m─────────────────────────────────────────────────────────────")
 		print ('\033[0;91m[•] \033 [1;92mSuccessfully Take ID from %s'%op['name'])
