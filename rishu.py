@@ -255,7 +255,7 @@ def publik():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print("033[0;92m[•] Name : "+op["\033[0;90mname"])
+			print("033[0;92m[•] Name : "+\033[0;90mop["name"])
 		except KeyError:
 			print("  \033[1;91m [!] ID NOT found !").format("R")
 			print("  \033[1;91m [!] Return").format(N)
