@@ -255,7 +255,7 @@ def publik():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print("033[0;92m[•] Name : "\033[0;90m+op["name"])
+			print("033[0;92m[•] Name : \033[0;90m"+op["name"])
 		except KeyError:
 			print("  \033[1;91m [!] ID NOT found !").format("R")
 			print("  \033[1;91m [!] Return").format(N)
@@ -265,13 +265,13 @@ def publik():
 		z=json.loads(r.text)
 		print("\033[0;90m[•] Getting ID ...")
 		print ("\033[0;91m─────────────────────────────────────────────────────────────")
-		qq = (op['first_name']+'.json').replace(" ","_")
+		qq = (op['first_name']+'.Rishu').replace(" ","_")
 		ys = open(qq , 'w')#.replace(" ","_")
 		for a in z['friends']['data']:
-			id.append(a['id']+"<=>"+a['name'])
-			ys.write(a['id']+"<=>"+a['name']+'\n')
+			id.append(a['id']+"<=>\033[0;90m"+a['name'])
+			ys.write(a['id']+"<=>\033[0;90m"+a['name']+'\n')
 			print("\r  %s "%(str(len(id)))),;sys.stdout.flush();time.sleep(0.007)
-			print (  a["name"])
+			print (  \033[0;90ma["name"])
 		ys.close()
 		print ("\033[0;91m─────────────────────────────────────────────────────────────")
 		print ('\033[0;91m[•] \033 [1;92mSuccessfully Take ID from %s'%op['name'])
